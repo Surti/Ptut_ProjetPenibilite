@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <div class="row">              
+      <div class="col-md-4 col-md-offset-4">Graphe</div> 
+    </div>
+    <div class="row">                      
+      <div>
+        Tout les evenements
+      <br/>
+        {{ev}}
+      </div>
+      <div>
+        Tout les capteurs avec leurs valeurs
+      <br/>
+        {{capt}}
+      </div>
+      <div>
+        <form>
+          Employee :
+          <select [(ngModel)]="selecteduser" name="selecteduser" size="1">
+              <option *ngFor="let user of listUser" value="{{user}}" >{{user}}</option>
+          </select>
+  
+          <br/>
+          Raspberry :
+          <select [(ngModel)]="selectedrasp" name="selectedrasp" size="1">
+              <option *ngFor="let rasp of listRasp" value="{{rasp}}" >{{rasp}}</option>
+          </select>
+          <br/>
+          Date :
+          <select [(ngModel)]="selectedate" name="selectedate" size="1">
+              <option *ngFor="let date of listDate" value="{{date}}" >{{date}}</option>
+          </select>
+          <br/>
+          Capteur :
+          <select [(ngModel)]="selectedcapt" name="selectedcapt" size="1">
+              <option *ngFor="let capt of listCapt" value="{{capt}}" >{{capt}}</option>
+          </select>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+
+
